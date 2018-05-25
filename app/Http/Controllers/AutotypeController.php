@@ -20,6 +20,7 @@ class AutotypeController extends Controller
     {
         $autotype = new Autotype();
         $autotype->name = $request->name;
+        $autotype->category_id = $request->category_id;
         $autotype->save();
 
         return back();
@@ -27,7 +28,8 @@ class AutotypeController extends Controller
 
     public function autotypesort($id)
     {
-        $autos = Auto::all()->where('type_id', '=', $id);
+        $autos = Auto::where('type_id', '=', $id)->get();
+
 
         return response()->json(['autos' => $autos]);
     }

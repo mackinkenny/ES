@@ -15,13 +15,13 @@ class CreateAutosTable extends Migration
     {
         Schema::create('autos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('info');
-            $table->string('price');
-            $table->string('address');
-            $table->string('contact');
-            $table->integer('type_id');
-            $table->string('autotype_name');
+            $table->string('name')->nullable();
+            $table->text('info')->nullable();
+            $table->string('price')->nullable();
+            $table->string('address')->nullable();
+            $table->string('contact')->nullable();
+            $table->integer('type_id')->nullable();
+            $table->string('type_name')->nullable();
             $table->string('img_path')->nullable();
 
 

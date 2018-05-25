@@ -7,6 +7,7 @@
 @endsection
 @section('content')
 
+    <div class="row justify-content-center">
     <div class="col-8">
         <div class="mb-5 text-center">
             <span style="font-size:40px;">{{$auto->name}}</span>
@@ -61,6 +62,7 @@
             <div style="clear: both;"></div>
         </div>
 
+    </div>
     </div>
 @endsection
 @section('javascripts')

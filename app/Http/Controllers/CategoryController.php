@@ -2,9 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Auto;
 use App\Autotype;
+use App\Build;
+use App\Buildmater;
+use App\Buildmatertype;
+use App\Buildtype;
 use App\Category;
 use App\Catphoto;
+use App\Electro;
+use App\Electrotype;
+use App\Service;
+use App\Servicetype;
+use App\Tool;
+use App\Tooltype;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Intervention\Image\Facades\Image;
@@ -39,8 +50,43 @@ public function storecategory(Request $request)
     public function allshow($id)
     {
         $category = Category::find($id);
-        $autotypes = Autotype::all()->where('category_id','=',$id);
-        return view('show.category',['autotypes' => $autotypes, 'category' => $category]);
+        switch ($category->name){
+            case 'Услуги':
+                $services = Service::all();
+                $servicetypes = Servicetype::all()->where('category_id','=',$id);
+                return view('show.serviceshow',['servicetypes' => $servicetypes, 'category' => $category, 'services' => $services]); break;
+
+            case 'Техника':
+                $autos = Auto::all();
+                $autotypes = Autotype::all()->where('category_id','=',$id);
+                return view('show.autoshow',['autotypes' => $autotypes, 'category' => $category, 'autos' => $autos]); break;
+
+            case 'Недвижимость':
+                $builds = Build::all();
+                $buildtypes = Buildtype::all()->where('category_id','=',$id);
+                return view('show.houseshow',['buildtypes' => $buildtypes, 'category' => $category, 'builds' => $builds]); break;
+
+            case 'Строительные материалы':
+                $materials = Buildmater::all();
+                $materialtypes = Buildmatertype::all()->where('category_id','=',$id);
+                return view('show.materialshow',['materialtypes' => $materialtypes, 'category' => $category, 'materials' => $materials]); break;
+
+            case 'Строительные инструменты':
+                $tools = Tool::all();
+                $tooltypes = Tooltype::all()->where('category_id','=',$id);
+                return view('show.toolshow',['tooltypes' => $tooltypes, 'category' => $category, 'tools' => $tools]); break;
+
+            case 'Электроприборы':
+                $electros = Electro::all();
+                $electrotypes = Electrotype::all()->where('category_id','=',$id);
+                return view('show.electroshow',['electrotypes' => $electrotypes, 'category' => $category, 'electros' => $electros]); break;
+
+            default: return back();
+        }
+    }
+    public function createlist()
+    {
+        return view('create.createlist');
     }
 
 }

@@ -36,11 +36,11 @@ class AutoController extends Controller
         $auto->contact = $request->contact;
         $auto->type_id = $request->type_id;
         $autotype = Autotype::find($request->type_id);
-        $auto->autotype_name = $autotype->name;
+        $auto->type_name = $autotype->name;
         $auto->save();
         foreach ($request->img_paths as $index => $photo) {
             $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/autophoto/' . $filename );
+            Image::make($photo)->save( 'image/photo/' . $filename );
             $photonew = new Autophoto();
             $photonew->img_path = $filename;
             $photonew->auto_id = $auto->id;
@@ -59,6 +59,6 @@ class AutoController extends Controller
         $auto = Auto::find($id);
         $photos = Autophoto::all()->where('auto_id','=',$id);
 
-        return view('show.auto',['auto' => $auto, 'photos' => $photos]);
+        return view('object.object',['object' => $auto, 'photos' => $photos]);
     }
 }

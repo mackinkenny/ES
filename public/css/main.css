@@ -1,3 +1,21 @@
+.owl-prev i, .owl-next i {
+    color: black;
+}
+.owl-prev, .owl-next {
+    position: absolute;
+    top: 45%;
+    margin-top: -10px;
+}
+.owl-prev {
+    left: -40px;
+}
+.owl-next {
+    right: -40px;
+}
+body
+{
+    background-color: white;
+}
 .navbar
 {
     padding:0px;
@@ -163,3 +181,5 @@ ul.menu > li:hover > ul.submenu {
     font-size: 35px;
     font-family: "Times New Roman";
 }
+
+

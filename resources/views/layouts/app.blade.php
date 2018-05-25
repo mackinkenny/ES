@@ -10,11 +10,14 @@
     <meta charset="UTF-8">
     <title>Almash</title>
 
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/dist/assets/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owlcarousel/dist/assets/owl.theme.default.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Forum|Lobster&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/fontawesome/web-fonts-with-css/css/fontawesome-all.css') }}">
     @yield('styles')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/create.css') }}">
 
 </head>
 <body>
@@ -66,6 +69,7 @@
     <img src="/image/main.png" class="w-100">
 </div>
 </a>
+
 
     {{--<div class="col-2 text-center bg-menus" style="border-right:1px solid black;">--}}
         {{--<span style="font-size:40px;">Категории</span>--}}
@@ -131,47 +135,47 @@
 {{--<div class="col-2 text-center bg-menus" style="border-left:1px solid black;">--}}
     {{--<span style="font-size:40px;">Новости</span>--}}
 {{--</div>--}}
-<footer class="bg-footer text-muted" style="border-top: 2px solid black" >
+<footer class="bg-footer text-muted mt-5" style="border-top: 2px solid black" >
     <div class="container">
-        <div class="row justify-content-center justify-content-lg-around text-center">
-            <div class="col-12 col-lg-3 mt-3">
-                <a href="/">
-                    <img src="/image/barter.png" class="img-fluid" alt="">
-                </a>
-            </div>
-            <div class="col-12 col-md-auto mt-5">
-                <p class="h2 mb-2 txt-white">
-                    <u>
-                        Телефоны:
-                    </u>
-                </p>
-                <address class="contacts">
-                    <p class="txt-white">+996 (***) *** ***</p>
-                </address>
-                <address>
-                    <p class="txt-white">+996 (***) *** ***</p>
-                </address>
-            </div>
+        {{--<div class="row justify-content-center justify-content-lg-around text-center">--}}
+            {{--<div class="col-12 col-lg-3 mt-3">--}}
+                {{--<a href="/">--}}
+                    {{--<img src="/image/barter.png" class="img-fluid" alt="">--}}
+                {{--</a>--}}
+            {{--</div>--}}
+            {{--<div class="col-12 col-md-auto mt-5">--}}
+                {{--<p class="h2 mb-2 txt-white">--}}
+                    {{--<u>--}}
+                        {{--Телефоны:--}}
+                    {{--</u>--}}
+                {{--</p>--}}
+                {{--<address class="contacts">--}}
+                    {{--<p class="txt-white">+996 (***) *** ***</p>--}}
+                {{--</address>--}}
+                {{--<address>--}}
+                    {{--<p class="txt-white">+996 (***) *** ***</p>--}}
+                {{--</address>--}}
+            {{--</div>--}}
 
-            <div class="col-12 col-md-auto mb-4 mb-md-0 mt-5 ">
-                <p class="h2 mb-2 txt-white"><u>E-mail:</u></p>
-                <a href="#" class="text-muted txt-white">Almash.kg@gmail.com</a>
-            </div>
+            {{--<div class="col-12 col-md-auto mb-4 mb-md-0 mt-5 ">--}}
+                {{--<p class="h2 mb-2 txt-white"><u>E-mail:</u></p>--}}
+                {{--<a href="#" class="text-muted txt-white">Almash.kg@gmail.com</a>--}}
+            {{--</div>--}}
 
-            <div class="col-12 col-md-auto mt-5">
-                <p class="h2 mb-2 txt-white"><u>Соц. сети:</u></p>
-                <div class="small mb-4 mb-md-2  align-items-center">
-                    <i class="fab fa-2x fa-instagram text-light"></i>&nbsp;
-                    <a href="https://www.instagram.com/bayservice" target="_blank" class="text-muted txt-white">https://www.instagram.com/almash.kg</a>
-                </div>
-                <div class="small mb-4 mb-md-2 align-items-center">
-                    <i class="fab fa-2x fa-facebook text-light"></i>&nbsp;
-                    <a href="https://www.facebook.com/bayservice" target="_blank" class="text-muted txt-white">https://www.facebook.com/almash.kg</a>
-                </div>
+            {{--<div class="col-12 col-md-auto mt-5">--}}
+                {{--<p class="h2 mb-2 txt-white"><u>Соц. сети:</u></p>--}}
+                {{--<div class="small mb-4 mb-md-2  align-items-center">--}}
+                    {{--<i class="fab fa-2x fa-instagram text-light"></i>&nbsp;--}}
+                    {{--<a href="https://www.instagram.com/bayservice" target="_blank" class="text-muted txt-white">https://www.instagram.com/almash.kg</a>--}}
+                {{--</div>--}}
+                {{--<div class="small mb-4 mb-md-2 align-items-center">--}}
+                    {{--<i class="fab fa-2x fa-facebook text-light"></i>&nbsp;--}}
+                    {{--<a href="https://www.facebook.com/bayservice" target="_blank" class="text-muted txt-white">https://www.facebook.com/almash.kg</a>--}}
+                {{--</div>--}}
 
 
-            </div>
-        </div>
+            {{--</div>--}}
+        {{--</div>--}}
 
 
 
@@ -181,9 +185,14 @@
     </div>
 </footer>
 
-
+<script type="text/javascript" src="{{ asset('/css/owlcarousel/dist/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/autotypesort.js') }}"></script>
+<script src="{{ asset('js/buildtypesort.js') }}"></script>
+<script src="{{ asset('js/servicetypesort.js') }}"></script>
+<script src="{{ asset('js/materialtypesort.js') }}"></script>
+<script src="{{ asset('js/tooltypesort.js') }}"></script>
+<script src="{{ asset('js/electrotypesort.js') }}"></script>
 
 @yield('javascripts')
 
