@@ -43,7 +43,7 @@
             </div>
             <br>
             @if($object->price != null)
-            <div class="col-10 m-auto" style="border:1px solid gray; border-radius: 12px;">
+            <div class="col-10 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">
                 <div class="punkt p-2" style="float: left; ">
                     Цена
                 </div>
@@ -57,7 +57,7 @@
             <br>
             @endif
             @if($object->address != null)
-            <div class="col-10 m-auto" style="border:1px solid gray; border-radius: 12px;">
+            <div class="col-10 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">
                 <div class="punkt p-2" style="float: left;">
                     Адресс
                 </div>
@@ -69,7 +69,7 @@
             <br>
             @endif
             @if($object->contact != null)
-            <div class="col-10 m-auto" style="border:1px solid gray; border-radius: 12px;">
+            <div class="col-10 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">
                 <div class="punkt p-2" style="float: left;">
                     Контакты
                 </div>

@@ -66,7 +66,7 @@
 </header>
 <a href="/">
 <div class="row pr-0 mr-0" style="border-top: 1px solid black; border-bottom: 1px solid black;">
-    <img src="/image/main.png" class="w-100">
+    <img src="/image/main.png" class="w-100 h-100">
 </div>
 </a>
 
