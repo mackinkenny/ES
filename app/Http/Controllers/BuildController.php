@@ -50,7 +50,8 @@ class BuildController extends Controller
     {
         $build = Build::find($id);
         $photos = Buildphoto::all()->where('build_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $build, 'photos' => $photos]);
+        return view('object.object',['object' => $build, 'photos' => $photos, 'count' => $count]);
     }
 }

@@ -50,8 +50,9 @@ class ServiceController extends Controller
     {
         $service = Service::find($id);
         $photos = Servicephoto::all()->where('service_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $service, 'photos' => $photos]);
+        return view('object.object',['object' => $service, 'photos' => $photos, 'count' => $count]);
     }
 
 }

@@ -50,8 +50,9 @@ class ToolController extends Controller
     {
         $tool = Tool::find($id);
         $photos = Buildtoolphoto::all()->where('buildtool_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $tool, 'photos' => $photos]);
+        return view('object.object',['object' => $tool, 'photos' => $photos, 'count' => $count]);
     }
 
 

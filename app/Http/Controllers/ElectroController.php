@@ -50,7 +50,8 @@ class ElectroController extends Controller
     {
         $electro = Electro::find($id);
         $photos = Electrophoto::all()->where('electro_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $electro, 'photos' => $photos]);
+        return view('object.object',['object' => $electro, 'photos' => $photos, 'count' => $count]);
     }
 }

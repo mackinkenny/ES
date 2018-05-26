@@ -50,7 +50,8 @@ class BuildmaterController extends Controller
     {
         $material = Buildmater::find($id);
         $photos = Buildmaterphoto::all()->where('buildmater_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $material, 'photos' => $photos]);
+        return view('object.object',['object' => $material, 'photos' => $photos, 'count' => $count]);
     }
 }
