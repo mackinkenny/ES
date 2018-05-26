@@ -12,7 +12,7 @@
             <div class="mb-5 text-center">
                 <span style="font-size:35px;">{{$object->name}}</span>
             </div>
-            @if(!$photos->isEmpty())
+            @if(!$photos->isEmpty() && $count != 1)
                 <div class="row mb-5 justify-content-center">
                     <div class="owl-carousel owl-theme col-10" style=" padding:12px; background-image:url(images/stipes2.png); background-size: 100px 100px;" >
             {{--<div class="owl-carousel owl-theme col-8 m-auto" >--}}

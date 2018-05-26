@@ -58,7 +58,8 @@ class AutoController extends Controller
     {
         $auto = Auto::find($id);
         $photos = Autophoto::all()->where('auto_id','=',$id);
+        $count = count($photos);
 
-        return view('object.object',['object' => $auto, 'photos' => $photos]);
+        return view('object.object',['object' => $auto, 'photos' => $photos,'count' => $count]);
     }
 }
