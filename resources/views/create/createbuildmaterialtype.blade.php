@@ -11,7 +11,7 @@
     <h1 class="m-5" style="font-size: 30px; font-weight: bold;">Создать тип материалов</h1>
 </div>
 <div class="row col-md-12 col-md-offset-1 justify-content-center ">
-    <form class="forma p-4" action="{{ route('storebuildmatertype') }}" method="POST" enctype="multipart/form-data">
+    <form class="forma p-4" action="{{ route('storebuildmaterialtype') }}" method="POST" enctype="multipart/form-data">
         {{ csrf_field() }}
         <div class="mt-2"><label class="create-label" for="name">Название типа*</label><input type="text" name="name" style="float:right;"></div><hr>
         <div class="mt-2"><label class="create-label" for="category_id">Категория*</label><select name="category_id" class="js-example-basic-single" style="float:right;">

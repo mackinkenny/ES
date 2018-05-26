@@ -38,7 +38,6 @@ $(document).ready(function() {
                             "</div>" +
                             "<div class='col-12 text-script'>" +
                             "<span class='ml-3 mr-5'>" + auto.type_name + "</span>" +
-                            "<span class='mr-5'>" + auto.address + "</span>" +
                             "<span class='mr-5'>" + auto.created_at + "</span>" +
                             "</div>" +
                             "<div class='col-12 ml-3 mt-2 text-script'>" +
@@ -75,7 +74,6 @@ $(document).ready(function() {
                             "</div>" +
                             "<div class='col-12 text-script'>" +
                             "<span class='ml-3 mr-5'>" + auto.type_name + "</span>" +
-                            "<span class='mr-5'>" + auto.address + "</span>" +
                             "<span class='mr-5'>" + auto.created_at + "</span>" +
                             "</div>" +
                             "<div class='col-12 ml-3 mt-2 text-script'>" +
