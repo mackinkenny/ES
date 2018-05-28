@@ -20,14 +20,14 @@
                 @endforeach
     </div>
     <div>
-    <div class="row pr-0 mr-0" style="border-top: 1px solid black;">
-        <div class="col-6 p-5"><hr><p class="text-center" style="font-family: 'Times New Roman'; font-size: 34px;">Алмаш</p><hr>
-            <div class="p-4"><span>Портал объявлений по бартерному обмену услугами и товарами.</span>
-            <span>Обмен может производится по всей территории страны.</span></div>
-        </div>
-        <div class="col-6 p-5"><img src="/image/country.png" class="w-100"></div>
+    {{--<div class="row pr-0 mr-0" style="border-top: 1px solid black;">--}}
+        {{--<div class="col-6 p-5"><hr><p class="text-center" style="font-family: 'Times New Roman'; font-size: 34px;">Алмаш</p><hr>--}}
+            {{--<div class="p-4"><span>Портал объявлений по бартерному обмену услугами и товарами.</span>--}}
+            {{--<span>Обмен может производится по всей территории страны.</span></div>--}}
+        {{--</div>--}}
+        {{--<div class="col-6 p-5"><img src="/image/country.png" class="w-100"></div>--}}
 
-    </div>
+    {{--</div>--}}
     </div>
     {{--@foreach($objects as $object)--}}
         {{--<div class="row col-12 p-4 ml-1 mb-2" style="background:#e9ecef;">--}}
