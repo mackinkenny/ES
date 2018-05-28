@@ -7,7 +7,7 @@
     <p style="font-size:45px; font-family: 'Times New Roman'; font-weight: lighter;">Категории</p>
     </div>
     </div>
-        <div class="row text-center justify-content-center p-5 w-100" style="background:white; border-bottom:1px solid black;">
+        <div class="row text-center justify-content-center p-5 w-100" style="background:white;">
             @foreach($categories as $category)
         <div class="col-4 cat">
                     <a href="/show/{{$category->id}}">
