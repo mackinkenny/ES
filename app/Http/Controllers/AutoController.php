@@ -38,16 +38,18 @@ class AutoController extends Controller
         $autotype = Autotype::find($request->type_id);
         $auto->type_name = $autotype->name;
         $auto->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Autophoto();
-            $photonew->img_path = $filename;
-            $photonew->auto_id = $auto->id;
-            $photonew->save();
-            if ($index == 0) {
-                $auto->img_path = $filename;
-                $auto->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Autophoto();
+                $photonew->img_path = $filename;
+                $photonew->auto_id = $auto->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $auto->img_path = $filename;
+                    $auto->save();
+                }
             }
         }
 
