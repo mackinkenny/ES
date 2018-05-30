@@ -79,6 +79,7 @@ Route::get('/showbuild/{id}', 'BuildController@showbuild');
 Route::get('/showmaterial/{id}', 'BuildmaterController@showmaterial');
 Route::get('/showtool/{id}', 'ToolController@showtool');
 Route::get('/showelectro/{id}', 'ElectroController@showelectro');
+Route::get('/showother/{id}', 'OtherController@showother');
 Route::get('/partner', 'PartnerController@show')->name('partner');
 Route::get('/show/{id}', 'CategoryController@allshow')->name('show');
 
