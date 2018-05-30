@@ -12,6 +12,8 @@ use App\Category;
 use App\Catphoto;
 use App\Electro;
 use App\Electrotype;
+use App\Other;
+use App\Othertype;
 use App\Service;
 use App\Servicetype;
 use App\Tool;
@@ -80,6 +82,11 @@ public function storecategory(Request $request)
                 $electros = Electro::all();
                 $electrotypes = Electrotype::all()->where('category_id','=',$id);
                 return view('show.electroshow',['electrotypes' => $electrotypes, 'category' => $category, 'electros' => $electros]); break;
+
+            case 'Другое':
+                $others = Other::all();
+                $othertypes = Othertype::all()->where('category_id','=',$id);
+                return view('show.othershow',['othertypes' => $othertypes, 'category' => $category, 'others' => $others]); break;
 
             default: return back();
         }
