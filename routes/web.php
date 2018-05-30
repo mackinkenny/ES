@@ -60,6 +60,13 @@ Route::post('/storeelectro', 'ElectroController@storeelectro')->name('storeelect
 Route::get('/createelectrotype', 'ElectrotypeController@createelectrotype')->name('createelectrotype');
 Route::post('/storeelectrotype', 'ElectrotypeController@storeelectrotype')->name('storeelectrotype');
 
+//Other
+Route::get('/createother', 'OtherController@createother')->name('createother');
+Route::post('/storeother', 'OtherController@storeother')->name('storeother');
+
+Route::get('/createothertype', 'OthertypeController@createothertype')->name('createothertype');
+Route::post('/storeothertype', 'OthertypeController@storeothertype')->name('storeothertype');
+
 //Category
 Route::get('/createcategory', 'CategoryController@createcategory')->name('createcategory');
 Route::post('/storecategory', 'CategoryController@storecategory')->name('storecategory');

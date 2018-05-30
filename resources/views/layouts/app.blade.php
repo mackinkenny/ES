@@ -193,6 +193,7 @@
 <script src="{{ asset('js/materialtypesort.js') }}"></script>
 <script src="{{ asset('js/tooltypesort.js') }}"></script>
 <script src="{{ asset('js/electrotypesort.js') }}"></script>
+<script src="{{ asset('js/othertypesort.js') }}"></script>
 
 @yield('javascripts')
 
