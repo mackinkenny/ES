@@ -30,6 +30,7 @@ class ServiceController extends Controller
         $servicetype = Servicetype::find($request->type_id);
         $service->type_name = $servicetype->name;
         $service->save();
+        if(!$request->img_paths == null) {
         foreach ($request->img_paths as $index => $photo) {
             $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
             Image::make($photo)->save( 'image/photo/' . $filename );
@@ -42,7 +43,7 @@ class ServiceController extends Controller
                 $service->save();
             }
         }
-
+        }
         return back();
     }
 

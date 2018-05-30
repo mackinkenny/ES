@@ -29,16 +29,18 @@ class OtherController extends Controller
         $othertype = Othertype::find($request->type_id);
         $other->type_name = $othertype->name;
         $other->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Otherphoto();
-            $photonew->img_path = $filename;
-            $photonew->other_id = $other->id;
-            $photonew->save();
-            if ($index == 0) {
-                $other->img_path = $filename;
-                $other->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Otherphoto();
+                $photonew->img_path = $filename;
+                $photonew->other_id = $other->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $other->img_path = $filename;
+                    $other->save();
+                }
             }
         }
 

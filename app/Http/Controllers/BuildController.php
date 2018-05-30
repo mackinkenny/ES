@@ -30,19 +30,20 @@ class BuildController extends Controller
         $buildtype = Buildtype::find($request->type_id);
         $build->type_name = $buildtype->name;
         $build->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Buildphoto();
-            $photonew->img_path = $filename;
-            $photonew->build_id = $build->id;
-            $photonew->save();
-            if ($index == 0) {
-                $build->img_path = $filename;
-                $build->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Buildphoto();
+                $photonew->img_path = $filename;
+                $photonew->build_id = $build->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $build->img_path = $filename;
+                    $build->save();
+                }
             }
         }
-
         return back();
     }
 

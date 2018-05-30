@@ -30,16 +30,18 @@ class BuildmaterController extends Controller
         $buildmatertype = Buildmatertype::find($request->type_id);
         $buildmater->type_name = $buildmatertype->name;
         $buildmater->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Buildmaterphoto();
-            $photonew->img_path = $filename;
-            $photonew->buildmater_id = $buildmater->id;
-            $photonew->save();
-            if ($index == 0) {
-                $buildmater->img_path = $filename;
-                $buildmater->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Buildmaterphoto();
+                $photonew->img_path = $filename;
+                $photonew->buildmater_id = $buildmater->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $buildmater->img_path = $filename;
+                    $buildmater->save();
+                }
             }
         }
 

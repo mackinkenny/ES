@@ -30,16 +30,18 @@ class ToolController extends Controller
         $tooltype = Tooltype::find($request->type_id);
         $tool->type_name = $tooltype->name;
         $tool->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Buildtoolphoto();
-            $photonew->img_path = $filename;
-            $photonew->buildtool_id = $tool->id;
-            $photonew->save();
-            if ($index == 0) {
-                $tool->img_path = $filename;
-                $tool->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Buildtoolphoto();
+                $photonew->img_path = $filename;
+                $photonew->buildtool_id = $tool->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $tool->img_path = $filename;
+                    $tool->save();
+                }
             }
         }
 

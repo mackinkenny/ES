@@ -30,16 +30,18 @@ class ElectroController extends Controller
         $electrotype = Electrotype::find($request->type_id);
         $electro->type_name = $electrotype->name;
         $electro->save();
-        foreach ($request->img_paths as $index => $photo) {
-            $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
-            Image::make($photo)->save( 'image/photo/' . $filename );
-            $photonew = new Electrophoto();
-            $photonew->img_path = $filename;
-            $photonew->electro_id = $electro->id;
-            $photonew->save();
-            if ($index == 0) {
-                $electro->img_path = $filename;
-                $electro->save();
+        if(!$request->img_paths == null) {
+            foreach ($request->img_paths as $index => $photo) {
+                $filename = time() + random_int(random_int(-10000, 0), random_int(1000, 999999)) . '.' . $photo->getClientOriginalExtension();
+                Image::make($photo)->save('image/photo/' . $filename);
+                $photonew = new Electrophoto();
+                $photonew->img_path = $filename;
+                $photonew->electro_id = $electro->id;
+                $photonew->save();
+                if ($index == 0) {
+                    $electro->img_path = $filename;
+                    $electro->save();
+                }
             }
         }
 
