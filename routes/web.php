@@ -102,3 +102,6 @@ Route::get('/tooltype', 'TooltypeController@tooltypebacksort');
 
 Route::get('/electrotype/{id}', 'ElectrotypeController@electrotypesort');
 Route::get('/electrotype', 'ElectrotypeController@electrotypebacksort');
+
+Route::get('/othertype/{id}', 'OthertypeController@othertypesort');
+Route::get('/othertype', 'OthertypeController@othertypebacksort');

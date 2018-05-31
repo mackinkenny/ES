@@ -37,28 +37,30 @@
                     <li class="nav-item ml-1 mr-1">
                         <a class="nav-link txt-menu" href="/">Главная</a>
                     </li>
-                    <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link txt-menu">Тарифы</a>
-                    </li>
 
-                    <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link txt-menu">Предложения</a>
-                    </li>
-                    <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link txt-menu">Политика сайта</a>
-                    </li>
                     <li class="nav-item ml-1 mr-1">
                         <a href="/partner" class="nav-link txt-menu">Партнеры</a>
                     </li>
-                    <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link txt-menu" href="/contact">Контакты</a>
+
+                </ul>
+
+                <ul class="nav flex-column text-center mr-2">
+                    <li class="nav-item">
+                        <span class="nav-link p-1 large txt-menu">0(552) 119 299</span>
+                    </li>
+                </ul>
+
+                <ul class="nav flex-column text-center mr-2">
+                    <li class="nav-item">
+                        <span class="nav-link p-1 large txt-menu">0(705) 225 008</span>
                     </li>
                 </ul>
 
                 <ul class="nav flex-column text-center">
                     <li class="nav-item">
-                        <span class="nav-link p-1 small txt-menu">Almash@gmail.com</span>
+                        <span class="nav-link p-1 large txt-menu">0(771) 062 468</span>
                     </li>
+
                 </ul>
             </div>
         </div>
