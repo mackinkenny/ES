@@ -27,23 +27,23 @@ body
     background-color: #fefefe!important;
 }
 .txt-menu{
-    font-family: 'Times New Roman';
-    color:#040c68!important;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color:#000000!important;
 }
 .nav-item a{
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 .nav-item a:hover {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    background: #dedede;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    opacity: 1;
+    -webkit-transform: scale(1.10);
+    -ms-transform: scale(1.10);
+    transform: scale(1.10);
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    opacity: 0.7;
 }
 
 ul {
@@ -112,32 +112,34 @@ ul.menu > li:hover > ul.submenu {
 }
 .cat-text
 {
-    font-size:20px;
-    font-family: Arial;
+    font-size: 19px;
+    color:#66676A;
+    font-family: Forum;
     font-weight: lighter;
 }
 .cat
 {
     border-radius: 25px;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 .cat:hover
 {
-    background: #f2f9ff;
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 1;
 }
 .cat > a{
     text-decoration: none;
-    color: #4788c7;
+    color: #000000;
 }
 .left-cat
 {
+
+    font-family: Forum;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
@@ -152,7 +154,7 @@ ul.menu > li:hover > ul.submenu {
 }
 .left-cat > a{
     text-decoration: none;
-    color: #4788c7;
+    color: #000000;
 }
 
 .text-a
@@ -168,11 +170,12 @@ ul.menu > li:hover > ul.submenu {
 }
 .text-a:hover
 {
-    color:#4788c7;
+    color: #5a6268;
     text-decoration: none;
 }
 .text-script
 {
+    font-family: Forum;
     font-size: 13px;
     color:#6c757d;
 }
@@ -180,6 +183,24 @@ ul.menu > li:hover > ul.submenu {
 {
     font-size: 35px;
     font-family: "Times New Roman";
+}
+.main-text
+{
+    font-weight: bolder;
+    font-size:18px;
+    color:black;
+    font-family: Forum;
+}
+.main-text:hover
+{
+    color: #5a6268;
+    text-decoration: none;
+}
+.img-prod {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: 40%;
 }
 
 

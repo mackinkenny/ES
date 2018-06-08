@@ -23,7 +23,7 @@
 <body>
 
 <header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light bg-menus" style="font-family: forum; text-transform: uppercase;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-menus" style="font-family: forum; text-transform: uppercase; border-bottom: 1px solid black">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <img src="/images/Icons/logo.png" class="img-fluid" width="110" alt="">
@@ -34,41 +34,66 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav my-3 my-md-0 mx-auto text-center">
+
                     <li class="nav-item ml-1 mr-1">
                         <a class="nav-link txt-menu" href="/">Главная</a>
+                    </li>
+
+                    <li class="nav-item ml-1 mr-1">
+                        <a href="" class="nav-link txt-menu">Список на бартер</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
                         <a href="/partner" class="nav-link txt-menu">Партнеры</a>
                     </li>
 
-                </ul>
-
-                <ul class="nav flex-column text-center mr-2">
-                    <li class="nav-item">
-                        <span class="nav-link p-1 large txt-menu">0(552) 119 299</span>
-                    </li>
-                </ul>
-
-                <ul class="nav flex-column text-center mr-2">
-                    <li class="nav-item">
-                        <span class="nav-link p-1 large txt-menu">0(705) 225 008</span>
-                    </li>
-                </ul>
-
-                <ul class="nav flex-column text-center">
-                    <li class="nav-item">
-                        <span class="nav-link p-1 large txt-menu">0(771) 062 468</span>
+                    <li class="nav-item ml-1 mr-1">
+                        <a href="" class="nav-link txt-menu">Контакты</a>
                     </li>
 
                 </ul>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Authentication Links -->
+                        @guest
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </ul>
+                </div>
+
+
             </div>
         </div>
     </nav>
 </header>
 <a href="/">
-<div class="row pr-0 mr-0" style="border-top: 1px solid black; border-bottom: 1px solid black;">
-    <img src="/image/main.png" class="w-100 h-100">
+<div class="row pr-0 mr-0" style="border-bottom: 1px solid black;">
+    <img src="/image/main1.png" class="w-100 h-100">
 </div>
 </a>
 
@@ -137,7 +162,7 @@
 {{--<div class="col-2 text-center bg-menus" style="border-left:1px solid black;">--}}
     {{--<span style="font-size:40px;">Новости</span>--}}
 {{--</div>--}}
-<footer class="bg-footer text-muted mt-5" style="border-top: 2px solid black" >
+<footer class="bg-footer text-muted mt-5" style="border-top: 1px solid black" >
     <div class="container">
         {{--<div class="row justify-content-center justify-content-lg-around text-center">--}}
             {{--<div class="col-12 col-lg-3 mt-3">--}}
@@ -189,13 +214,8 @@
 
 <script type="text/javascript" src="{{ asset('/css/owlcarousel/dist/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/autotypesort.js') }}"></script>
-<script src="{{ asset('js/buildtypesort.js') }}"></script>
-<script src="{{ asset('js/servicetypesort.js') }}"></script>
-<script src="{{ asset('js/materialtypesort.js') }}"></script>
-<script src="{{ asset('js/tooltypesort.js') }}"></script>
-<script src="{{ asset('js/electrotypesort.js') }}"></script>
-<script src="{{ asset('js/othertypesort.js') }}"></script>
+<script src="{{ asset('js/typesort.js') }}"></script>
+
 
 @yield('javascripts')
 

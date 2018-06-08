@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row col-12 justify-content-center p-5">
+    <div class="container">
+    <div class="row col-12 justify-content-center">
         <div class="col-12 text-center">
             <p style="font-size:45px; font-family: 'Times New Roman'; font-weight: lighter;">{{$category->name}}</p>
         </div>
@@ -30,7 +31,7 @@
                         </div>
                         <div class="col-8">
                             <div class="col-12">
-                                <a href="/showauto/{{$auto->id}}" class="text-a ml-3">{{$auto->name}}</a><hr>
+                                <a href="/showauto/{{$auto->id}}" class="main-text ml-3">{{$auto->name}}</a><hr>
                             </div>
                             <div class="col-12 text-script">
 
@@ -49,5 +50,6 @@
 
             </div>
         </div>
+    </div>
     </div>
 @endsection

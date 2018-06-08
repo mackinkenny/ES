@@ -71,9 +71,15 @@ Route::post('/storeothertype', 'OthertypeController@storeothertype')->name('stor
 Route::get('/createcategory', 'CategoryController@createcategory')->name('createcategory');
 Route::post('/storecategory', 'CategoryController@storecategory')->name('storecategory');
 
+//Product
+Route::get('/createproduct/{id}', 'ProductController@createproduct')->name('createproduct');
+Route::post('/storeproduct', 'ProductController@storeproduct')->name('storeproduct');
 
+//Type
+Route::get('/createtype', 'TypeController@createtype')->name('createtype');
+Route::post('/storetype', 'TypeController@storetype')->name('storetype');
 //*******************SHOWS*******************
-Route::get('/showauto/{id}', 'AutoController@showauto')->name('showauto');
+Route::get('/showproduct/{id}', 'ProductController@showproduct')->name('showproduct');
 Route::get('/showservice/{id}', 'ServiceController@showservice');
 Route::get('/showbuild/{id}', 'BuildController@showbuild');
 Route::get('/showmaterial/{id}', 'BuildmaterController@showmaterial');
@@ -85,8 +91,8 @@ Route::get('/show/{id}', 'CategoryController@allshow')->name('show');
 
 
 //********************AJAX-JS ROUTES********************
-Route::get('/autotype/{id}', 'AutotypeController@autotypesort');
-Route::get('/autotype', 'AutotypeController@autotypebacksort');
+Route::get('/type/{id}', 'TypeController@typesort');
+Route::get('/types/{id}', 'TypeController@typebacksort');
 
 Route::get('/buildtype/{id}', 'BuildtypeController@buildtypesort');
 Route::get('/buildtype', 'BuildtypeController@buildtypebacksort');
@@ -105,3 +111,9 @@ Route::get('/electrotype', 'ElectrotypeController@electrotypebacksort');
 
 Route::get('/othertype/{id}', 'OthertypeController@othertypesort');
 Route::get('/othertype', 'OthertypeController@othertypebacksort');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
