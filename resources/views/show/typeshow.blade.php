@@ -6,9 +6,9 @@
                 <p style="font-size:45px; font-family: 'Times New Roman'; font-weight: lighter;">{{$category->name}}</p>
             </div>
 
-            <div class="col-2">
-                <div class="left-cat">
-                    <a class="all text-a" href="">
+            <div class="col-2" style="position: fixed; top:40%;left:5%;">
+                    <div class="left-cat">
+                    <a class="all text-a" href="" id="{{$category->id}}">
                         <p class="">Все категории</p>
                     </a>
                 </div>

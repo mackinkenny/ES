@@ -17,9 +17,10 @@ class TypeController extends Controller
 
         return response()->json(['products' => $products]);
     }
-    public function typebacksort()
+
+    public function typebacksort($id)
     {
-        $products = Product::all();
+        $products = Product::where('cat_id', '=', $id)->get();
 
         return response()->json(['products' => $products]);
     }
