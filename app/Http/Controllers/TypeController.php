@@ -15,6 +15,7 @@ class TypeController extends Controller
         $products = Product::where('parent_id', '=', $id)->get();
 
 
+
         return response()->json(['products' => $products]);
     }
 
