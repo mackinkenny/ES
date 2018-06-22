@@ -13,9 +13,6 @@
             <div class="mb-4 mt-4 text-center">
                 <span style="font-size:30px; font-family: Forum; font-weight: bolder;">{{$object->name}}</span>
             </div>
-            @if($object->our == 1)
-                <img class="object-stamp" src="/image/Almash.png" alt="">
-            @endif
             @if(!$photos->isEmpty() && $count != 1)
                 <div class="position-absolute col-4 p-2" style="right:-40%; top:0%; background-color: #faf0d3; border-radius: 15px;"><span style="font-family: Forum; font-size: 16px;">Вы можете посмотреть все фото товара, пролистнув их (зажмите левую кнопку мыши на картинке и пролистните в сторону)</span></div>
                 <div class="row mb-4 justify-content-center">
