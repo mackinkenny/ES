@@ -54,7 +54,7 @@ public function storecategory(Request $request)
     public function allshow($id)
     {
         $category = Category::find($id);
-        $products = Product::all()->where('cat_id','=',$id);
+        $products = Product::all()->where('cat_id','=',$id)->reverse();
         $types = Type::all()->where('parent_id','=',$id);
         return view('show.typeshow',['types' => $types, 'products' => $products, 'category' => $category]);
 

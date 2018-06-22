@@ -50,7 +50,56 @@
             </div>
         </div>
     </div>
+    <hr>
+    <div class="row col-12 justify-content-center mt-5">
+            @foreach($products as $product)
+            <div class="row col-5 p-4 mb-2 mr-5" style="background:#f9f9f9;">
+                @if($product->img_path != null)
+                <div class="col-4">
+                    <a href="/showproduct/{{$product->id}}"><div class="img-prod" style="background-image: url('/../image/photo/{{$product->img_path}}'); height:150px!important;">
+                            @if($product->our == 1)
+                                <img src="/image/Almash.png" style="position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
+                            @endif
+                        </div></a>
 
+                </div>
+
+                <div class="col-8">
+                    <div class="col-12">
+                        <a href="/showproduct/{{$product->id}}" class="main-text ml-3"><?= str_limit($product->name, 30) ?></a><hr>
+                    </div>
+                    <div class="col-12 text-script">
+
+                        <span class="ml-3 mr-5">{{$product->parent_name}}</span>
+
+                        <span class="mr-5">{{$product->created_at}}</span><hr>
+                    </div>
+                    <div class="col-12 ml-3 mt-2 text-script">
+                        <span><?= str_limit($product->info, 80) ?></span>
+                    </div>
+                </div>
+                    @else
+                        <div class="col-12">
+                            @if($product->our == 1)
+                                <img src="/image/Almash.png" style="position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
+                            @endif
+                            <a href="/showproduct/{{$product->id}}" class="main-text ml-3"><?= str_limit($product->name, 30) ?></a><hr>
+                        </div>
+                        <div class="col-12 text-script">
+
+                            <span class="ml-3 mr-5">{{$product->parent_name}}</span>
+
+                            <span class="mr-5">{{$product->created_at}}</span><hr>
+                        </div>
+                        <div class="col-12 ml-3 mt-2 text-script">
+                            <span><?= str_limit($product->info, 80) ?></span>
+                        </div>
+                @endif
+
+            </div>
+
+            @endforeach
+    </div>
 
 
 @endsection

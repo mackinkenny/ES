@@ -20,13 +20,11 @@
                 <div class="position-absolute col-4 p-2" style="right:-40%; top:0%; background-color: #faf0d3; border-radius: 15px;"><span style="font-family: Forum; font-size: 16px;">Вы можете посмотреть все фото товара, пролистнув их (зажмите левую кнопку мыши на картинке и пролистните в сторону)</span></div>
                 <div class="row mb-4 justify-content-center">
                     <div class="owl-carousel owl-theme col-10">
-            {{--<div class="owl-carousel owl-theme col-8 m-auto" >--}}
                 @foreach($photos as $photo)
                     <div class="item">
                         <img src="/image/photo/{{$photo->img_path}}" alt="">
                     </div>
                 @endforeach
-            {{--</div>--}}
                     </div>
                 </div>
             @else
@@ -56,44 +54,6 @@
                 </div>
                 <div style="clear: both;"></div>
             <br>
-            {{--@if($object->price != null)--}}
-            {{--<div class="col-8 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">--}}
-                {{--<div class="punkt p-2" style="float: left; ">--}}
-                    {{--Цена--}}
-                {{--</div>--}}
-
-                {{--<div class="data p-2" style="float: right; width:400px;">--}}
-                    {{--{{$object->price}}--}}
-                {{--</div>--}}
-
-                {{--<div style="clear: both;"></div>--}}
-            {{--</div>--}}
-            {{--<br>--}}
-            {{--@endif--}}
-            {{--@if($object->address != null)--}}
-            {{--<div class="col-8 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">--}}
-                {{--<div class="punkt p-2" style="float: left;">--}}
-                    {{--Адресс--}}
-                {{--</div>--}}
-                {{--<div class="data p-2" style="float: right; width:400px;">--}}
-                    {{--{{$object->address}}--}}
-                {{--</div>--}}
-                {{--<div style="clear: both;"></div>--}}
-            {{--</div>--}}
-            {{--<br>--}}
-            {{--@endif--}}
-            {{--@if($object->contact != null)--}}
-            {{--<div class="col-8 m-auto" style="border:1.5px solid #e9ecef; border-radius: 12px;">--}}
-                {{--<div class="punkt p-2" style="float: left;">--}}
-                    {{--Контакты--}}
-                {{--</div>--}}
-                {{--<div class="data p-2" style="float: right; width:400px;">--}}
-                    {{--{{$object->contact}}--}}
-                {{--</div>--}}
-                {{--<div style="clear: both;"></div>--}}
-            {{--</div>--}}
-                {{--@endif--}}
-
         </div>
     </div>
 </div>
