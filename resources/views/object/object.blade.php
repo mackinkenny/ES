@@ -36,9 +36,9 @@
                 <div class="col-3 object-par">Цена:</div>
                 <div class="col-9 object-par">{{$object->price}}</div>
                 @endif
-                @if($object->master)
-                <div class="col-3 object-par">Владелец: </div>
-                <div class="col-9 object-par">Эрмек</div>
+                @if($object->contact)
+                <div class="col-3 object-par">Контакты: </div>
+                <div class="col-9 object-par">{{$object->contact}}</div>
                     @endif
                     @if($object->address)
                 <div class="col-3 object-par">Адресс:</div>
