@@ -31,7 +31,7 @@
             @endif
             <br>
 
-            <div class="row justify-content-center col-8">
+            <div class="row justify-content-center col-12">
                 @if($object->price)
                 <div class="col-3 object-par">Цена:</div>
                 <div class="col-9 object-par">{{$object->price}}</div>
