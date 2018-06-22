@@ -24,6 +24,8 @@ class CreateProductsTable extends Migration
             $table->string('parent_name')->nullable();
             $table->integer('cat_id')->nullable();
             $table->string('img_path')->nullable();
+            $table->boolean('our')->nullable();
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }

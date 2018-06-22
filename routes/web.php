@@ -1,36 +1,40 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+Route::group(['middleware' => ['admin']],function() {
+//Type
+    Route::get('/createtype', 'TypeController@createtype')->name('createtype');
+    Route::post('/storetype', 'TypeController@storetype')->name('storetype');
+
+//Category
+    Route::get('/createcategory', 'CategoryController@createcategory')->name('createcategory');
+    Route::post('/storecategory', 'CategoryController@storecategory')->name('storecategory');
+//Admin Task
+    Route::get('/admintask', 'MessageController@showall');
+
+});
 //Transitions
 Route::get('/', 'MainController@index')->name('/');
-Route::get('/auto/{id}', 'AutoController@auto')->name('auto');
 
-
+//Auth
 //*******************CREATES*************************
-//Category
-Route::get('/createcategory', 'CategoryController@createcategory')->name('createcategory');
-Route::post('/storecategory', 'CategoryController@storecategory')->name('storecategory');
+Route::get('/createlist', 'CategoryController@createlist');
 
 //Product
 Route::get('/createproduct/{id}', 'ProductController@createproduct')->name('createproduct');
 Route::post('/storeproduct', 'ProductController@storeproduct')->name('storeproduct');
 
-//Type
-Route::get('/createtype', 'TypeController@createtype')->name('createtype');
-Route::post('/storetype', 'TypeController@storetype')->name('storetype');
+
+
+//Message
+Route::post('/message', 'MessageController@storemessage')->name('message');
+
 //*******************SHOWS*******************
 Route::get('/showproduct/{id}', 'ProductController@showproduct')->name('showproduct');
 Route::get('/partner', 'PartnerController@show')->name('partner');
 Route::get('/show/{id}', 'CategoryController@allshow')->name('show');
+Route::get('/contact', 'CompanyController@contact');
+Route::get('/list', 'CompanyController@list');
+Route::get('/bid', 'CompanyController@bid');
 
 
 //********************AJAX-JS ROUTES********************

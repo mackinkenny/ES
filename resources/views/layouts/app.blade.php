@@ -40,7 +40,7 @@
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
-                        <a href="" class="nav-link txt-menu">Список на бартер</a>
+                        <a href="/list" class="nav-link txt-menu">Список на бартер</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
@@ -48,7 +48,7 @@
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
-                        <a href="" class="nav-link txt-menu">Контакты</a>
+                        <a href="/contact" class="nav-link txt-menu">Контакты</a>
                     </li>
 
                 </ul>
@@ -62,8 +62,8 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('login') }}">{{ __('Вход') }}</a></li>
+                            <li><a class="nav-link" href="{{ route('register') }}">{{ __('Регистрация') }}</a></li>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -71,10 +71,24 @@
                                 </a>
 
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/createlist">
+                                        Подать объявление
+                                    </a>
+                                    @if(Auth::user()->status == 0)
+                                    <a class="dropdown-item" href="/bid">
+                                        Оставить предложение
+                                    </a>
+                                    @endif
+                                        @if(Auth::user()->status == 1)
+                                            <a class="dropdown-item" href="/admintask">
+                                                Сообщения
+                                            </a>
+                                        @endif
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __('Выйти') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

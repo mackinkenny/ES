@@ -5,7 +5,7 @@
 
     {{--</div>--}}
 <div class="container">
-    <p class="text-center" style="font-size:35px; font-weight: bold;">Категории</p>
+    <p class="text-center mt-3" style="font-size:35px; font-weight: bold; font-family: 'Times New Roman'; letter-spacing: 2px;">Категории</p><hr>
         <div class="row text-center justify-content-center p-5 w-100" style="background:white;">
             @foreach($categories as $category)
         <div class="col-4 cat">
@@ -21,7 +21,7 @@
 </div>
     <div class="container">
         <hr>
-        <div style="font-size:35px;text-align:center; font-weight: bolder;">Цель нашего сайта</div><hr>
+        <div style="font-size:35px;text-align:center; font-weight: bolder; font-family: 'Times New Roman'; letter-spacing: 2px;">Цель нашего сайта</div><hr>
         <div class="col-12 row mt-5">
             <div class="col-6" style="margin-top: 100px;">
         <iframe width="510px" height="270px" src="https://www.youtube.com/embed/hgTKRmtkbBM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -42,8 +42,9 @@
             <div class="col-12 p-5">
                 <span style="font-size:17px; font-family: Forum;">
                     Цель нашего сайта - это поддержание нашего объекта <strong>"Diamond Resort"</strong>. Все наши товары выставленные на портале используются для
-                    обмена на нужные нам материалы и товары для строительства нашего городка. Если вы заинтересованы в наших товарах, вы можете оставить нам свое предложение в вкладке и мы с вами свяжемся.
-                    Список приоритетных для нас товаров вы можете найти в вкладке "Список на обмен".
+                    обмена на нужные нам материалы и товары для строительства нашего городка. Если вы заинтересованы в наших товарах, вы можете оставить нам свое предложение во вкладке <strong>"Оставить предложение"</strong> и мы с вами свяжемся.
+                    <strong>Наши товары выделенны штампом "Almash.kg".</strong>
+                    Список приоритетных для нас товаров вы можете найти в вкладке <strong>"Список на бартер"</strong>.
 
                  </span>
             </div>

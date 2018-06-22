@@ -2,8 +2,9 @@
 @section('content')
     <div class="container">
     <div class="row text-center" style="background:white;">
-        <div class="col-12 mb-5">
-            <h1 class="mt-5" style="font-family: 'Times New Roman';font-size:50px; font-weight: lighter;">Наши Партнеры</h1>
+        <div class="col-12 mb-5 mt-3">
+            <span style="font-size:35px; font-weight: bold; font-family: 'Times New Roman'; letter-spacing: 2px;">Наши Партнеры</span>
+            <hr>
         </div>
 
         <div class="col-6">

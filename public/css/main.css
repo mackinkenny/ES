@@ -1,3 +1,8 @@
+.txt-forum
+{
+    font-family:Forum;
+}
+
 .owl-prev i, .owl-next i {
     color: black;
 }
@@ -102,18 +107,19 @@ ul.menu > li:hover > ul.submenu {
 {
     font-size: 18px;
     font-weight: bold;
-    color:blue;
+    font-family: Forum;
+    color:#66676A;
 }
 .data
 {
     font-size: 18px;
-    font-family: "Times New Roman";
+    font-family: Forum;
+    font-weight: bolder;
     color:black;
 }
 .cat-text
 {
     font-size: 19px;
-    color:#66676A;
     font-family: Forum;
     font-weight: lighter;
 }
@@ -201,6 +207,26 @@ ul.menu > li:hover > ul.submenu {
     width: 100%;
     background-size: cover;
     background-position: 40%;
+}
+.object-form
+{
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px 4px rgba(1, 5, 2, 0.1);
+}
+.object-par
+{
+    font-family: Forum;
+    font-size:22px;
+}
+.object-stamp
+{
+    position: absolute;
+    top:-2%;
+    left:-3%;
+    width:150px;
+    height:150px;
+    transform: rotate(-25deg);
 }
 
 

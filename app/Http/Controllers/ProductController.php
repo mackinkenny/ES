@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Product;
 use App\Productphoto;
 use App\Type;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 
 class ProductController extends Controller
@@ -13,9 +15,9 @@ class ProductController extends Controller
     //
     public function createproduct($id)
     {
-
+        $category = Category::find($id);
         $types = Type::all()->where('parent_id','=',$id);
-        return view('create.product',['types' => $types]);
+        return view('create.product',['types' => $types, 'category' => $category]);
     }
     
     public function storeproduct(Request $request)
@@ -46,6 +48,14 @@ class ProductController extends Controller
                 }
             }
         }
+
+        if(Auth::user()->status == 1)
+        {
+            $product->our = 1;
+        }
+        $product->user_id = Auth::user()->id;
+        $product->save();
+
 
         return back();
     }

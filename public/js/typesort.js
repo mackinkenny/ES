@@ -17,7 +17,10 @@ $(document).ready(function() {
             flag = false;
         }
         if (flag === true) {
-            $('#ajax-types').empty();
+
+            $('#ajax-types').hide(100,function () {
+                $('#ajax-types').empty();
+            });
             a = (this.id);
             $.ajax({
                 type: 'GET',
@@ -33,7 +36,7 @@ $(document).ready(function() {
                             product.name = product.name.slice(0, 45) + "...";
                         }
                         $('#ajax-types').append(
-                            "<div class='row col-12 p-4 ml-1 mb-2' style='background:#e9ecef;'>" +
+                            "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                             "<div class='col-4'>" +
                             "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                             "</div>" +
@@ -51,6 +54,7 @@ $(document).ready(function() {
                             "</div>" +
                             "</div>"
                         );
+                        $('#ajax-types').show(100);
                     }
                 }
             });
@@ -72,7 +76,9 @@ $(document).ready(function() {
             flag = false;
         }
         if (flag === true) {
-            $('#ajax-types').empty();
+            $('#ajax-types').hide(100,function () {
+                $('#ajax-types').empty();
+            });
             a = (this.id);
             $.ajax({
                 type: 'GET',
@@ -88,7 +94,7 @@ $(document).ready(function() {
                             product.name = product.name.slice(0, 45) + "...";
                         }
                         $('#ajax-types').append(
-                            "<div class='row col-12 p-4 ml-1 mb-2' style='background:#e9ecef;'>" +
+                            "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                             "<div class='col-4'>" +
                             "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                             "</div>" +
@@ -106,6 +112,7 @@ $(document).ready(function() {
                             "</div>" +
                             "</div>"
                         );
+                        $('#ajax-types').show(100);
                     }
                 }
             });
