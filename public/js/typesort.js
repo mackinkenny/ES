@@ -42,7 +42,7 @@ $(document).ready(function() {
                                     "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                                     "<div class='col-4'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
-                                    "<img src='/image/Almash.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "</div>" +
                                     "<div class='col-8'>" +
                                     "<div class='col-12'>" +
@@ -87,7 +87,7 @@ $(document).ready(function() {
                                 $('#ajax-types').append(
                                     "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                                     "<div class='col-12'>" +
-                                    "<img src='/image/Almash.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
@@ -166,7 +166,7 @@ $(document).ready(function() {
                                     "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                                     "<div class='col-4'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
-                                    "<img src='/image/Almash.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "</div>" +
                                     "<div class='col-8'>" +
                                     "<div class='col-12'>" +
@@ -211,7 +211,7 @@ $(document).ready(function() {
                                 $('#ajax-types').append(
                                     "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
                                     "<div class='col-12'>" +
-                                    "<img src='/image/Almash.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +

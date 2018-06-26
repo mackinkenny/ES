@@ -33,7 +33,7 @@
                             <div class="col-4">
                                 <a href="/showproduct/{{$product->id}}"><div class="img-prod" style="background-image: url('/../image/photo/{{$product->img_path}}');">
                                        @if($product->our == 1)
-                                            <img src="/image/Almash.png" style="position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
+                                            <img src="/image/main.png" style="position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
                                         @endif
                                     </div></a>
 
@@ -56,7 +56,7 @@
 
                                     <div class="col-12">
                                         @if($product->our == 1)
-                                            <img src="/image/Almash.png" style="position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
+                                            <img src="/image/main.png" style="position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)" alt="">
                                         @endif
                                         <a href="/showproduct/{{$product->id}}" class="main-text ml-3"><?= str_limit($product->name, 45) ?></a><hr>
                                     </div>
