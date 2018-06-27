@@ -8,10 +8,10 @@
 @section('content')
 <div class="container">
 
-    <div class="row justify-content-center mt-5">
-        <div class="col-8 object-form">
+    <div class="row justify-content-center mt-sm-5 ">
+        <div class="col-sm-8 col-12 object-form">
             <div class="mb-4 mt-4 text-center">
-                <span style="font-size:30px; font-family: Forum; font-weight: bolder;">{{$object->name}}</span>
+                <span class="title-text" style="font-size:30px; font-family: Forum; font-weight: bolder;">{{$object->name}}</span>
             </div>
             @if(!$photos->isEmpty() && $count != 1)
                 <div class="position-absolute col-4 p-2" style="right:-40%; top:0%; background-color: #faf0d3; border-radius: 15px;"><span style="font-family: Forum; font-size: 16px;">Вы можете посмотреть все фото товара, пролистнув их (зажмите левую кнопку мыши на картинке и пролистните в сторону)</span></div>
@@ -25,7 +25,7 @@
                     </div>
                 </div>
             @else
-                <div class="col-8 m-auto" >
+                    <div class="col-8 m-auto" >
                 <img src="/image/photo/{{$object->img_path}}" class="w-100" alt="">
                 </div>
             @endif
