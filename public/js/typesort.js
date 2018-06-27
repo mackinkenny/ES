@@ -39,20 +39,20 @@ $(document).ready(function() {
                             if(product.our == 1)
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-4'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
-                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "</div>" +
-                                    "<div class='col-8'>" +
-                                    "<div class='col-12'>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='col-sm-8 col-9 text-script pad-0'>" +
+                                    "<div class='col-12 text-script pad-0'>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                    "<span class='mr-5'>" + product.created_at + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                    "<span>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>" +
@@ -61,19 +61,19 @@ $(document).ready(function() {
                             }
                             else {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-4'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "</div>" +
-                                    "<div class='col-8'>" +
-                                    "<div class='col-12'>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='col-sm-8 col-9 text-script pad-0'>" +
+                                    "<div class='col-12 text-script pad-0'>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
                                     "<span class='mr-5'>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>" +
@@ -85,16 +85,16 @@ $(document).ready(function() {
                         {
                             if(product.our == 1) {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-12'>" +
-                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-12 text-script'>" +
+                                    "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                    "<span class='mr-5'>" + product.created_at + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                    "<span>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>"
@@ -103,15 +103,15 @@ $(document).ready(function() {
                             else
                             {
                                 $('#ajax-types').append(
-                                "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                "<div class='col-12'>" +
-                                "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                "<div class='col-12 text-script'>" +
+                                "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                 "</div>" +
                                 "<div class='col-12 text-script'>" +
-                                "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                "<span class='mr-5'>" + product.created_at + "</span>" +
+                                "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                "<span>" + product.created_at + "</span>" +
                                 "</div>" +
-                                "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                "<div class='col-12 ml-sm-3 text-script'>" +
                                 "<span>" + product.info + "</span>" +
                                 "</div>" +
                                 "</div>"
@@ -163,20 +163,20 @@ $(document).ready(function() {
                             if(product.our == 1)
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-4'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
-                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "</div>" +
-                                    "<div class='col-8'>" +
-                                    "<div class='col-12'>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='col-sm-8 col-9 text-script pad-0'>" +
+                                    "<div class='col-12 text-script pad-0'>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                    "<span class='mr-5'>" + product.created_at + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                    "<span>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>" +
@@ -185,19 +185,19 @@ $(document).ready(function() {
                             }
                             else {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-4'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "</div>" +
-                                    "<div class='col-8'>" +
-                                    "<div class='col-12'>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='col-sm-8 col-9 text-script pad-0'>" +
+                                    "<div class='col-12 text-script pad-0'>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
                                     "<span class='mr-5'>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>" +
@@ -209,16 +209,16 @@ $(document).ready(function() {
                         {
                             if(product.our == 1) {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-12'>" +
-                                    "<img src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-12 text-script'>" +
+                                    "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                    "<span class='mr-5'>" + product.created_at + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                    "<span>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>"
@@ -227,15 +227,15 @@ $(document).ready(function() {
                             else
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-4 ml-1 mb-2' style='background:#f9f9f9;'>" +
-                                    "<div class='col-12'>" +
-                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-3'>" + product.name + "</a><hr>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='col-12 text-script'>" +
+                                    "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
                                     "<div class='col-12 text-script'>" +
-                                    "<span class='ml-3 mr-5'>" + product.parent_name + "</span>" +
-                                    "<span class='mr-5'>" + product.created_at + "</span>" +
+                                    "<span class='ml-sm-3 mr-sm-5 mr-4'>" + product.parent_name + "</span>" +
+                                    "<span>" + product.created_at + "</span>" +
                                     "</div>" +
-                                    "<div class='col-12 ml-3 mt-2 text-script'>" +
+                                    "<div class='col-12 ml-sm-3 text-script'>" +
                                     "<span>" + product.info + "</span>" +
                                     "</div>" +
                                     "</div>"
