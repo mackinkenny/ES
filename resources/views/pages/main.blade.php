@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-8 text-script">
                     <div class="col-12 text-script">
-                        <a href="/showproduct/{{$product->id}}" class="main-text-2 ml-sm-3"><?= str_limit($product->name, 30) ?></a>
+                        <a href="/showproduct/{{$product->id}}" class="main-text main-text-2 ml-sm-3"><?= str_limit($product->name, 30) ?></a>
                     </div><br>
                     <div class="col-12 text-script">
 
