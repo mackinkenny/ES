@@ -37,19 +37,19 @@
                 <ul class="navbar-nav my-3 my-md-0 mx-auto text-center">
 
                     <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link txt-menu" href="/">Главная</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
-                        <a href="/list" class="nav-link txt-menu">Список на бартер</a>
+                        <a href="/list" class="nav-link">Список на бартер</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
-                        <a href="/partner" class="nav-link txt-menu">Партнеры</a>
+                        <a href="/partner" class="nav-link">Партнеры</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
-                        <a href="/contact" class="nav-link txt-menu">Контакты</a>
+                        <a href="/contact" class="nav-link">Контакты</a>
                     </li>
 
                 </ul>

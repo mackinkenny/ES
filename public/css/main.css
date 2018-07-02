@@ -36,19 +36,9 @@ body
     font-weight: lighter;
     color:#000000!important;
 }
-.nav-item a{
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-}
+
 .nav-item a:hover {
-    -webkit-transform: scale(1.10);
-    -ms-transform: scale(1.10);
-    transform: scale(1.10);
     background-color: #fdfdfd;
-    border-radius: 8px;
-    opacity: 0.7;
 }
 
 ul {
