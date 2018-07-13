@@ -18,7 +18,7 @@ $(document).ready(function() {
         }
         if (flag === true) {
 
-            $('#ajax-types').hide(100,function () {
+            $('#ajax-types').fadeOut(0,function () {
                 $('#ajax-types').empty();
             });
             a = (this.id);
@@ -39,7 +39,7 @@ $(document).ready(function() {
                             if(product.our == 1)
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
@@ -61,7 +61,7 @@ $(document).ready(function() {
                             }
                             else {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "</div>" +
@@ -85,7 +85,7 @@ $(document).ready(function() {
                         {
                             if(product.our == 1) {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-12 text-script'>" +
                                     "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
@@ -103,7 +103,7 @@ $(document).ready(function() {
                             else
                             {
                                 $('#ajax-types').append(
-                                "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                 "<div class='col-12 text-script'>" +
                                 "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                 "</div>" +
@@ -119,7 +119,7 @@ $(document).ready(function() {
                             }
                         }
 
-                        $('#ajax-types').show(100);
+                        $('#ajax-types').fadeIn(0);
                     }
                 }
             });
@@ -141,7 +141,7 @@ $(document).ready(function() {
             flag = false;
         }
         if (flag === true) {
-            $('#ajax-types').hide(100,function () {
+            $('#ajax-types').fadeOut(0,function () {
                 $('#ajax-types').empty();
             });
             a = (this.id);
@@ -163,7 +163,7 @@ $(document).ready(function() {
                             if(product.our == 1)
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-15%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
@@ -185,7 +185,7 @@ $(document).ready(function() {
                             }
                             else {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-sm-4 col-3 text-script-2'>" +
                                     "<a href='/showproduct/" + product.id + "'><div class='img-prod' style='background-image: url(/../image/photo/" + product.img_path + ");'></div></a>" +
                                     "</div>" +
@@ -209,7 +209,7 @@ $(document).ready(function() {
                         {
                             if(product.our == 1) {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-12 text-script'>" +
                                     "<img class='stamp-2' src='/image/main.png' style='position: absolute;top:-35px; left:-5%; width:70px; height:70px; transform: rotate(-20deg)' alt=''>" +
                                     "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
@@ -227,7 +227,7 @@ $(document).ready(function() {
                             else
                             {
                                 $('#ajax-types').append(
-                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2' style='background:#f9f9f9;'>" +
+                                    "<div class='row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated' style='background:#f9f9f9;'>" +
                                     "<div class='col-12 text-script'>" +
                                     "<a href='/showproduct/" + product.id + "' class='main-text ml-sm-3'>" + product.name + "</a>" +
                                     "</div>" +
@@ -243,7 +243,7 @@ $(document).ready(function() {
                             }
                         }
 
-                        $('#ajax-types').show(100);
+                        $('#ajax-types').fadeIn(0);
                     }
                 }
             });

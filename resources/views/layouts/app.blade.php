@@ -19,6 +19,7 @@
     @yield('styles')
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/create.css') }}">
+    <link rel="stylesheet" media="all" href="{{asset('css/animate.css')}}">
 
 </head>
 <body>
@@ -37,7 +38,7 @@
                 <ul class="navbar-nav my-3 my-md-0 mx-auto text-center">
 
                     <li class="nav-item ml-1 mr-1">
-                        <a class="nav-link" href="/">Главная</a>
+                        <a class="nav-link " href="/">Главная</a>
                     </li>
 
                     <li class="nav-item ml-1 mr-1">
@@ -108,7 +109,7 @@
 </header>
 <a href="/">
 <div class="row pr-0 mr-0" style="border-bottom: 1px solid black;">
-    <img src="/image/main1.png" class="w-100 h-100">
+    <img src="/image/main1.png" class="w-100 h-100 fadeIn animated">
 </div>
 </a>
 
@@ -230,6 +231,8 @@
 <script type="text/javascript" src="{{ asset('/css/owlcarousel/dist/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/typesort.js') }}"></script>
+<script src="{{ asset('js/wow.js') }}"></script>
+<script>new WOW().init();</script>
 
 
 @yield('javascripts')

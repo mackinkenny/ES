@@ -1,8 +1,19 @@
+.test
+{
+    display: block;
+}
+.container
+{
+    animation-delay: 0.5s;
+}
+.animate-div
+{
+    animation-delay: 0.5s;
+}
 .txt-forum
 {
     font-family:Forum;
 }
-
 .owl-prev i, .owl-next i {
     color: black;
 }
@@ -36,11 +47,9 @@ body
     font-weight: lighter;
     color:#000000!important;
 }
-
 .nav-item a:hover {
     background-color: #fdfdfd;
 }
-
 ul {
     display: block;
     margin: 0;
@@ -89,7 +98,6 @@ ul.submenu > li > a:hover {
     background-color: #dedede;
     text-decoration: underline;
 }
-
 ul.menu > li:hover > ul.submenu {
     display: block;
 }
@@ -132,9 +140,13 @@ ul.menu > li:hover > ul.submenu {
     text-decoration: none;
     color: #000000;
 }
+.content-div
+{
+    animation-delay: 0.3s;
+}
 .left-cat
 {
-
+    animation-delay: 0.3s;
     font-family: Forum;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -152,7 +164,6 @@ ul.menu > li:hover > ul.submenu {
     text-decoration: none;
     color: #000000;
 }
-
 .text-a
 {
     text-decoration: none;
@@ -228,12 +239,10 @@ ul.menu > li:hover > ul.submenu {
         font-family: Forum;
         font-weight: lighter;
     }
-
     .text-script {
         font-size: 8px;
         padding-left: 0px;
     }
-
     .text-script-2 {
         padding-left: 0px;
         padding-right: 2px;
