@@ -35,6 +35,7 @@ Route::get('/show/{id}', 'CategoryController@allshow')->name('show');
 Route::get('/contact', 'CompanyController@contact');
 Route::get('/list', 'CompanyController@list');
 Route::get('/bid', 'CompanyController@bid');
+Route::get('/begay', 'Controller@test');
 
 
 //********************AJAX-JS ROUTES********************
