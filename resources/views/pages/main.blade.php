@@ -51,7 +51,7 @@
         </div>
     </div>
     <hr>
-    <div class="container">
+    <div class="container d-md-block d-none">
     <div class="row col-12 justify-content-center mt-5">
             <div class="col-4 fadeInLeft wow"><img class="w-100" src="/image/house.png" alt=""></div>
             <div class="col-4 text-center fadeInUp wow"><img class="w-25 mt-5" src="/image/switch.png" alt=""></div>
