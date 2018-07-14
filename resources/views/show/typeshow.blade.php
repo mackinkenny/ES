@@ -28,7 +28,7 @@
                 <div class="col-12 p-sm-3 p-0 test" id="ajax-types">
 
                     @foreach($products as $product)
-                        <div class="row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn animated" style="background:#f9f9f9;">
+                        <div class="row col-12 p-sm-4 p-2 ml-1 mb-2 content-div fadeIn wow" style="background:#f9f9f9;">
                             @if($product->img_path != null)
                             <div class="col-sm-4 col-3 text-script-2">
                                 <a href="/showproduct/{{$product->id}}"><div class="img-prod" style="background-image: url('/../image/photo/{{$product->img_path}}');">
