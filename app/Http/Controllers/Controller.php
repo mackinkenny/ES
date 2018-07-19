@@ -15,4 +15,8 @@ class Controller extends BaseController
         {
             return view('text');
         }
+    public function plan()
+    {
+        return view('home');
+    }
 }

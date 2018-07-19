@@ -69,13 +69,13 @@
                                     <div class="col-12 ml-sm-3 text-script">
                                         <span><?= str_limit($product->info, 270) ?></span>
                                     </div>
-                            @endif
-                        </div>
+                                @endif
+                            </div>
                     @endforeach
 
                 </div>
             </div>
         </div>
-            @endif
+        @endif
     </div>
 @endsection

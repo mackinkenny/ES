@@ -36,6 +36,7 @@ Route::get('/contact', 'CompanyController@contact');
 Route::get('/list', 'CompanyController@list');
 Route::get('/bid', 'CompanyController@bid');
 Route::get('/begay', 'Controller@test');
+Route::get('/plan', 'Controller@plan');
 
 
 //********************AJAX-JS ROUTES********************
