@@ -10,6 +10,7 @@ Route::group(['middleware' => ['admin']],function() {
     Route::post('/storecategory', 'CategoryController@storecategory')->name('storecategory');
 //Admin Task
     Route::get('/admintask', 'MessageController@showall');
+    Route::get('/home', 'HomeController@index')->name('home');
 
 });
 //Transitions
@@ -46,6 +47,6 @@ Route::get('/types/{id}', 'TypeController@typebacksort');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
