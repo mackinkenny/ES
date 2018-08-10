@@ -227,11 +227,19 @@
         </div>
     </div>
 </footer>
-
+<script type="text/javascript" src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{ asset('/css/simple/jquery.maphilight.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/css/owlcarousel/dist/owl.carousel.min.js') }}"></script>
+<script type="text/javascript" src="{{asset('http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('jquery.maphilight.min.js')}}"></script>
+<script type="text/javascript">$(function() {
+        $('.map').maphilight();
+    });
+</script>
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/typesort.js') }}"></script>
 <script src="{{ asset('js/wow.js') }}"></script>
+<script src="{{ asset('js/genplan.js') }}"></script>
 <script>new WOW().init();</script>
 
 
